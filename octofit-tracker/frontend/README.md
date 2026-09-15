@@ -10,6 +10,8 @@ Define `VITE_CODESPACE_NAME` in `.env.local` when running the frontend in a GitH
 VITE_CODESPACE_NAME=your-codespace-name
 ```
 
+The variable must be defined for Codespace deployments. Do not commit `.env.local`; Vite exposes `VITE_*` values to the browser at build time.
+
 The app then calls `https://${VITE_CODESPACE_NAME}-8000.app.github.dev/api/[component]/`.
 When the variable is not defined, it safely falls back to `http://localhost:8000` for local backend development.
 
