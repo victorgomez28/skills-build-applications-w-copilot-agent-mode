@@ -1,0 +1,2 @@
+import ResourceTable from './ResourceTable.jsx'
+export default function Workouts() { return <ResourceTable resource="workouts" title="Workout library" description="Personalized starting points for the next session." emptyMessage="No workouts have been added yet." columns={[{ key: 'name', label: 'Workout' }, { key: 'difficulty', label: 'Difficulty' }, { key: 'description', label: 'Description' }, { key: 'exercises', label: 'Exercises', render: (item) => Array.isArray(item.exercises) ? item.exercises.length : '—' }]} /> }

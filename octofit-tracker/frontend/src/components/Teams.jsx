@@ -1,0 +1,2 @@
+import ResourceTable from './ResourceTable.jsx'
+export default function Teams() { return <ResourceTable resource="teams" title="Teams" description="The crews turning individual effort into shared momentum." emptyMessage="No teams have been created yet." columns={[{ key: 'name', label: 'Team' }, { key: 'members', label: 'Members', render: (item) => Array.isArray(item.members) ? item.members.length : '—' }, { key: '_id', label: 'Team ID' }]} /> }
